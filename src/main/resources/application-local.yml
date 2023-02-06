@@ -1,8 +1,8 @@
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/emailprojectback;DB_CLOSE_ON_EXIT=FALSE
     username: postgres
-    url: jdbc:postgresql://localhost:5432/emailprojectback
     password: caneta11
   sql:
     init:
@@ -10,4 +10,11 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create
-    show-sql: 'true'
+    show-sql: true
+
+springdoc:
+  swagger-ui:
+    doc-expansion: none
+    tags-sorter: alpha
+  api-docs:
+    enabled: true
